@@ -1,9 +1,7 @@
 import { useState, useCallback } from 'react'
 
-const MODEL = 'claude-sonnet-4-6'
-
 // Build a believable fallback recipe from whatever is expiring, so the demo
-// never dead-ends if the API key / network isn't available.
+// never dead-ends if the proxy / network isn't available.
 function fallbackRecipe(items) {
   const names = items.map((i) => i.name.replace(/\d+.*$/, '').trim())
   const has = (kw) => names.some((n) => n.toLowerCase().includes(kw))
@@ -63,38 +61,18 @@ function fallbackRecipe(items) {
   }
 }
 
-async function callAnthropic(items, signal) {
-  const key = import.meta.env?.VITE_ANTHROPIC_API_KEY
-  if (!key) throw new Error('no-key')
-  const expiring = items.map((i) => i.name).join(', ')
-  const res = await fetch('https://api.anthropic.com/v1/messages', {
+// Calls our own serverless proxy (/api/recipe), which holds the Gemini key
+// server-side. Never exposes any API key to the browser.
+async function callRecipeProxy(items, signal) {
+  const ingredients = items.map((i) => i.name)
+  const res = await fetch('/api/recipe', {
     method: 'POST',
     signal,
-    headers: {
-      'Content-Type': 'application/json',
-      'x-api-key': key,
-      'anthropic-version': '2023-06-01',
-      'anthropic-dangerous-direct-browser-access': 'true',
-    },
-    body: JSON.stringify({
-      model: MODEL,
-      max_tokens: 1000,
-      messages: [
-        {
-          role: 'user',
-          content: `You are a sustainable cooking assistant. Generate ONE recipe using as many of these ingredients as possible (they're about to expire): ${expiring}.
-
-Respond ONLY in JSON: {"name": "Recipe Name", "time": "30 mins", "servings": 2, "difficulty": "Easy", "ingredients": [{"item": "...", "amount": "...", "fromPantry": true}], "steps": ["Step 1...", "Step 2..."], "sustainabilityTip": "One tip about reducing waste while cooking this"}`,
-        },
-      ],
-    }),
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ ingredients }),
   })
-  if (!res.ok) throw new Error(`api-${res.status}`)
-  const data = await res.json()
-  const text = data?.content?.[0]?.text || ''
-  const jsonStart = text.indexOf('{')
-  const jsonEnd = text.lastIndexOf('}')
-  return JSON.parse(text.slice(jsonStart, jsonEnd + 1))
+  if (!res.ok) throw new Error(`proxy-${res.status}`)
+  return res.json()
 }
 
 export function useRecipe() {
@@ -110,7 +88,7 @@ export function useRecipe() {
     // Keep the delightful "cooking" state visible for at least a beat.
     const minDelay = new Promise((r) => setTimeout(r, 1400))
     try {
-      const [result] = await Promise.all([callAnthropic(items, controller.signal), minDelay])
+      const [result] = await Promise.all([callRecipeProxy(items, controller.signal), minDelay])
       setRecipe(result)
     } catch {
       await minDelay

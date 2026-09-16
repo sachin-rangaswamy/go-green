@@ -39,6 +39,15 @@ That URL is shareable, always-on, and PWA-installable ("Add to Home Screen").
 Every `git push` to `main` triggers a new Vercel build & deploy. Preview
 deployments are created for other branches automatically.
 
-## Later: environment variables
-When we add the secure AI-recipe proxy (Phase 2), the Anthropic key goes in
-**Vercel → Project → Settings → Environment Variables** — never in the repo.
+## Environment variables (AI recipes)
+The AI recipe feature uses a serverless proxy (`/api/recipe`) that calls Google
+Gemini. Add the key in **Vercel → Project → Settings → Environment Variables**:
+
+| Name | Value |
+|------|-------|
+| `GEMINI_API_KEY` | your Google AI Studio key (https://aistudio.google.com/apikey) |
+
+Set it for **Production** (and Preview if you want). Redeploy after adding it.
+The key is only ever read server-side — it is never exposed to the browser, and
+it must **not** be committed to the repo. Without it, the app falls back to a
+smart local recipe, so nothing breaks.

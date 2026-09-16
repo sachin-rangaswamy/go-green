@@ -45,15 +45,26 @@ Plus a **Pantry** screen (reached from Home/Scan) with the **AI Recipe Chef**.
 
 ## AI Recipe engine
 
-The Pantry's "What can I cook tonight?" button calls the Anthropic API (`claude-sonnet-4-6`) with your expiring ingredients and renders the returned recipe.
+The Pantry's "What can I cook tonight?" button calls **our own serverless proxy**
+(`/api/recipe`), which calls **Google Gemini** (`gemini-flash-latest`) with your
+expiring ingredients and returns a structured recipe. The API key lives only on
+the server (`GEMINI_API_KEY`) — it is **never shipped to the browser**.
 
-To enable live generation, provide a key at build/dev time:
+To enable live generation locally:
 
 ```bash
-echo 'VITE_ANTHROPIC_API_KEY=sk-ant-...' > .env
+cp .env.example .env       # then paste your key
+# .env  ->  GEMINI_API_KEY=your-key-here
+npm run dev                # the Vite dev server proxies /api/recipe
 ```
 
-Without a key (or if the call fails), it gracefully falls back to a **smart local recipe** built from the same ingredients — so the demo never dead-ends.
+Get a key at <https://aistudio.google.com/apikey>. In production the key is set in
+**Vercel → Settings → Environment Variables**. Without a key (or on any API error)
+the app gracefully falls back to a **smart local recipe** — so it never dead-ends.
+
+- `api/recipe.js` — Vercel serverless function (holds the key)
+- `api/_gemini.js` — shared Gemini call + retry/backoff
+- dev: mirrored by a small middleware in `vite.config.js`
 
 ---
 
