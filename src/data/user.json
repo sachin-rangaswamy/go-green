@@ -1,0 +1,28 @@
+{
+  "name": "Sam",
+  "avatar": "🧑‍🌾",
+  "level": 7,
+  "title": "Eco Warrior",
+  "points": 1847,
+  "nextLevelPoints": 2500,
+  "streak": 12,
+  "memberSince": "2025-03-15",
+  "co2Saved": 47.3,
+  "foodWastePrevented": 23.1,
+  "treesPlanted": 3,
+  "pointsThisWeek": 165,
+  "badges": ["b1", "b2", "b4", "b6"],
+  "connectedLoyalty": ["Tesco Clubcard"],
+  "availableLoyalty": ["Lidl Plus", "REWE Payback"],
+  "dietary": ["Vegetarian"],
+  "certPrefs": ["Fairtrade", "Organic"],
+  "allergens": ["Nuts"],
+  "monthlyStats": [
+    { "month": "Apr", "co2": 22.1, "waste": 9.4, "points": 640 },
+    { "month": "May", "co2": 28.7, "waste": 12.8, "points": 810 },
+    { "month": "Jun", "co2": 33.4, "waste": 15.1, "points": 990 },
+    { "month": "Jul", "co2": 39.0, "waste": 18.2, "points": 1180 },
+    { "month": "Aug", "co2": 43.6, "waste": 20.9, "points": 1520 },
+    { "month": "Sep", "co2": 47.3, "waste": 23.1, "points": 1847 }
+  ]
+}

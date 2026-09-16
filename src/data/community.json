@@ -1,0 +1,151 @@
+{
+  "posts": [
+    {
+      "id": "post1",
+      "user": { "name": "Sarah K.", "avatar": "🧑‍🌾", "level": 9 },
+      "gradient": ["#4CAF50", "#265832"],
+      "emoji": "🥕",
+      "caption": "Zero-waste veggie box from the Bremen farmers market — saved 2.3kg of would-be waste! 🌿",
+      "likes": 142,
+      "comments": 18,
+      "reactions": 37,
+      "timestamp": "2h ago"
+    },
+    {
+      "id": "post2",
+      "user": { "name": "Marco T.", "avatar": "👨‍🍳", "level": 12 },
+      "gradient": ["#FF9800", "#94755C"],
+      "emoji": "🍲",
+      "caption": "Made a stew from everything expiring in my fridge. Nothing wasted, belly full!",
+      "likes": 98,
+      "comments": 11,
+      "reactions": 24,
+      "timestamp": "5h ago"
+    },
+    {
+      "id": "post3",
+      "user": { "name": "Lena M.", "avatar": "🌻", "level": 7 },
+      "gradient": ["#8BC34A", "#4CAF50"],
+      "emoji": "🌱",
+      "caption": "First harvest from my balcony garden 🌱 Homegrown basil hits different.",
+      "likes": 211,
+      "comments": 29,
+      "reactions": 55,
+      "timestamp": "8h ago"
+    },
+    {
+      "id": "post4",
+      "user": { "name": "Ahmed R.", "avatar": "♻️", "level": 15 },
+      "gradient": ["#26A69A", "#265832"],
+      "emoji": "🫙",
+      "caption": "Refill run complete! Same 5 jars for 6 months now. Plastic-free and proud.",
+      "likes": 176,
+      "comments": 22,
+      "reactions": 48,
+      "timestamp": "1d ago"
+    },
+    {
+      "id": "post5",
+      "user": { "name": "Priya S.", "avatar": "🧕", "level": 10 },
+      "gradient": ["#E5567A", "#94755C"],
+      "emoji": "🍓",
+      "caption": "Turned overripe strawberries into jam instead of binning them. Sunday well spent!",
+      "likes": 134,
+      "comments": 15,
+      "reactions": 31,
+      "timestamp": "1d ago"
+    },
+    {
+      "id": "post6",
+      "user": { "name": "Tom W.", "avatar": "🚲", "level": 8 },
+      "gradient": ["#42A5F5", "#265832"],
+      "emoji": "🚲",
+      "caption": "Cycled to the store all week for the Green Commute challenge. 12km and 0 emissions!",
+      "likes": 89,
+      "comments": 9,
+      "reactions": 19,
+      "timestamp": "2d ago"
+    }
+  ],
+  "groups": [
+    {
+      "id": "g1",
+      "name": "Zero Waste Bremen",
+      "description": "Local tips, refill spots and swap events around Bremen.",
+      "memberCount": 234,
+      "coverEmoji": "🫙",
+      "gradient": ["#4CAF50", "#265832"],
+      "latestPosts": ["New refill station opened on Ostertorsteinweg!", "Swap meet this Sunday — bring jars."]
+    },
+    {
+      "id": "g2",
+      "name": "Vegan Recipe Swap",
+      "description": "Share and discover plant-based recipes daily.",
+      "memberCount": 1243,
+      "coverEmoji": "🥦",
+      "gradient": ["#8BC34A", "#4CAF50"],
+      "latestPosts": ["30-min chickpea curry 🔥", "Best oat milk for coffee?"]
+    },
+    {
+      "id": "g3",
+      "name": "Farmers Market Finds",
+      "description": "What's fresh, cheap and local this week.",
+      "memberCount": 567,
+      "coverEmoji": "🥕",
+      "gradient": ["#FF9800", "#94755C"],
+      "latestPosts": ["Strawberries are peaking right now", "Found £1 veg boxes at the north stall"]
+    },
+    {
+      "id": "g4",
+      "name": "Green Parents",
+      "description": "Sustainable living tips for busy families.",
+      "memberCount": 892,
+      "coverEmoji": "👨‍👩‍👧",
+      "gradient": ["#26A69A", "#265832"],
+      "latestPosts": ["Reusable snack bags that actually last", "Cloth nappy starter guide"]
+    }
+  ],
+  "events": [
+    {
+      "id": "e1",
+      "title": "Community Garden Cleanup",
+      "description": "Help tidy and plant the shared garden. Tools + tea provided.",
+      "date": "Sat 20 Sep",
+      "time": "10:00",
+      "location": "Bürgerpark, Bremen",
+      "attendees": 23,
+      "maxCapacity": 40,
+      "emoji": "🌿"
+    },
+    {
+      "id": "e2",
+      "title": "Swap Shop: Clothes & Books",
+      "description": "Bring what you don't need, take what you do. Free entry.",
+      "date": "Sun 21 Sep",
+      "time": "14:00",
+      "location": "Kulturhaus Walle",
+      "attendees": 45,
+      "maxCapacity": 60,
+      "emoji": "🧥"
+    },
+    {
+      "id": "e3",
+      "title": "Farmers Market Walk & Talk",
+      "description": "Guided tour of the best local, low-waste stalls.",
+      "date": "Sat 20 Sep",
+      "time": "08:00",
+      "location": "Domshof Market",
+      "attendees": 12,
+      "maxCapacity": 25,
+      "emoji": "🧺"
+    }
+  ],
+  "mapPins": [
+    { "id": "m1", "label": "Refill Station", "emoji": "🫙", "x": 28, "y": 34, "type": "shop" },
+    { "id": "m2", "label": "Farmers Market", "emoji": "🥕", "x": 62, "y": 46, "type": "market" },
+    { "id": "m3", "label": "Garden Cleanup", "emoji": "🌿", "x": 44, "y": 22, "type": "event" },
+    { "id": "m4", "label": "Swap Shop", "emoji": "🧥", "x": 74, "y": 68, "type": "event" },
+    { "id": "m5", "label": "Zero Waste Group", "emoji": "👥", "x": 20, "y": 62, "type": "group" },
+    { "id": "m6", "label": "Compost Hub", "emoji": "🌱", "x": 55, "y": 78, "type": "shop" }
+  ]
+}

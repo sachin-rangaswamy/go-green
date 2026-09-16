@@ -1,0 +1,90 @@
+[
+  {
+    "id": "i1",
+    "name": "Baby Spinach 200g",
+    "quantity": "1 bag",
+    "location": "fridge",
+    "initial": "S",
+    "color": "#4CAF50",
+    "addedDate": "2026-09-13",
+    "expiryDate": "2026-09-17",
+    "daysUntilExpiry": 1
+  },
+  {
+    "id": "i2",
+    "name": "Free-Range Eggs",
+    "quantity": "4 left",
+    "location": "fridge",
+    "initial": "E",
+    "color": "#D9A441",
+    "addedDate": "2026-09-08",
+    "expiryDate": "2026-09-18",
+    "daysUntilExpiry": 2
+  },
+  {
+    "id": "i3",
+    "name": "Cheddar Cheese 200g",
+    "quantity": "half block",
+    "location": "fridge",
+    "initial": "C",
+    "color": "#E6A817",
+    "addedDate": "2026-09-05",
+    "expiryDate": "2026-09-19",
+    "daysUntilExpiry": 3
+  },
+  {
+    "id": "i4",
+    "name": "Cherry Tomatoes 250g",
+    "quantity": "1 punnet",
+    "location": "fridge",
+    "initial": "T",
+    "color": "#E53935",
+    "addedDate": "2026-09-12",
+    "expiryDate": "2026-09-16",
+    "daysUntilExpiry": 0
+  },
+  {
+    "id": "i5",
+    "name": "Wholemeal Bread",
+    "quantity": "6 slices",
+    "location": "cupboard",
+    "initial": "B",
+    "color": "#A9744F",
+    "addedDate": "2026-09-10",
+    "expiryDate": "2026-09-21",
+    "daysUntilExpiry": 5
+  },
+  {
+    "id": "i6",
+    "name": "Alpro Oat Milk 1L",
+    "quantity": "1 carton",
+    "location": "cupboard",
+    "initial": "O",
+    "color": "#7CB342",
+    "addedDate": "2026-09-14",
+    "expiryDate": "2026-10-02",
+    "daysUntilExpiry": 16
+  },
+  {
+    "id": "i7",
+    "name": "Quorn Mince 300g",
+    "quantity": "1 pack",
+    "location": "freezer",
+    "initial": "Q",
+    "color": "#8BC34A",
+    "addedDate": "2026-09-01",
+    "expiryDate": "2027-02-01",
+    "daysUntilExpiry": 138
+  },
+  {
+    "id": "i8",
+    "name": "Frozen Peas 900g",
+    "quantity": "3/4 bag",
+    "location": "freezer",
+    "initial": "P",
+    "color": "#43A047",
+    "addedDate": "2026-08-20",
+    "expiryDate": "2027-03-01",
+    "daysUntilExpiry": 166
+  }
+]

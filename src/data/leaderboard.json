@@ -1,0 +1,12 @@
+[
+  { "rank": 1, "name": "Ahmed R.", "avatar": "♻️", "points": 3120, "level": 15, "topBadge": "🌍" },
+  { "rank": 2, "name": "Marco T.", "avatar": "👨‍🍳", "points": 2890, "level": 12, "topBadge": "🍳" },
+  { "rank": 3, "name": "Priya S.", "avatar": "🧕", "points": 2640, "level": 10, "topBadge": "♻️" },
+  { "rank": 4, "name": "Sarah K.", "avatar": "🧑‍🌾", "points": 2415, "level": 9, "topBadge": "🏆" },
+  { "rank": 5, "name": "Tom W.", "avatar": "🚲", "points": 2088, "level": 8, "topBadge": "🌱" },
+  { "rank": 6, "name": "Sam (You)", "avatar": "🧑‍🌾", "points": 1847, "level": 7, "topBadge": "🍳", "isUser": true },
+  { "rank": 7, "name": "Lena M.", "avatar": "🌻", "points": 1690, "level": 7, "topBadge": "🌱" },
+  { "rank": 8, "name": "Jonas B.", "avatar": "🧔", "points": 1502, "level": 6, "topBadge": "♻️" },
+  { "rank": 9, "name": "Yuki N.", "avatar": "👩", "points": 1344, "level": 6, "topBadge": "🌿" },
+  { "rank": 10, "name": "Elena V.", "avatar": "👧", "points": 1180, "level": 5, "topBadge": "🌱" }
+]

@@ -1,0 +1,80 @@
+{
+  "active": [
+    {
+      "id": "c1",
+      "title": "Plastic-Free Week",
+      "description": "Avoid products with plastic packaging for 7 days.",
+      "icon": "♻️",
+      "target": 7,
+      "progress": 4,
+      "unit": "days",
+      "reward": 150,
+      "startDate": "2026-09-14",
+      "endDate": "2026-09-21",
+      "participants": 1284,
+      "color": "#4CAF50"
+    },
+    {
+      "id": "c2",
+      "title": "Local Hero",
+      "description": "Buy 5 products sourced within 50km of you.",
+      "icon": "📍",
+      "target": 5,
+      "progress": 2,
+      "unit": "products",
+      "reward": 120,
+      "startDate": "2026-09-10",
+      "endDate": "2026-09-24",
+      "participants": 843,
+      "color": "#94755C"
+    },
+    {
+      "id": "c3",
+      "title": "Zero Waste Chef",
+      "description": "Cook 3 meals from expiring ingredients.",
+      "icon": "🍳",
+      "target": 3,
+      "progress": 1,
+      "unit": "meals",
+      "reward": 100,
+      "startDate": "2026-09-12",
+      "endDate": "2026-09-26",
+      "participants": 2107,
+      "color": "#FF9800"
+    },
+    {
+      "id": "c4",
+      "title": "Green Commute",
+      "description": "Walk or cycle to the store 3 times.",
+      "icon": "🚲",
+      "target": 3,
+      "progress": 1,
+      "unit": "trips",
+      "reward": 80,
+      "startDate": "2026-09-13",
+      "endDate": "2026-09-20",
+      "participants": 651,
+      "color": "#26A69A"
+    }
+  ],
+  "completed": [
+    { "id": "c5", "title": "Meat-Free Monday", "icon": "🥦", "reward": 60, "completedDate": "2026-09-08" },
+    { "id": "c6", "title": "Reusable Bag Champ", "icon": "🛍️", "reward": 40, "completedDate": "2026-09-05" },
+    { "id": "c7", "title": "Refill Rookie", "icon": "🫙", "reward": 50, "completedDate": "2026-08-30" },
+    { "id": "c8", "title": "Compost Starter", "icon": "🌱", "reward": 70, "completedDate": "2026-08-24" }
+  ],
+  "badges": [
+    { "id": "b1", "name": "First Scan", "icon": "🌱", "desc": "Scanned your first product", "unlocked": true },
+    { "id": "b2", "name": "Plastic Avenger", "icon": "♻️", "desc": "10 plastic-free shops", "unlocked": true },
+    { "id": "b3", "name": "Streak Master", "icon": "🏆", "desc": "30-day green streak", "unlocked": false },
+    { "id": "b4", "name": "Waste Warrior", "icon": "🍳", "desc": "Saved 10kg of food", "unlocked": true },
+    { "id": "b5", "name": "Carbon Cutter", "icon": "🌍", "desc": "Saved 50kg CO₂", "unlocked": false },
+    { "id": "b6", "name": "Community Champion", "icon": "👥", "desc": "Joined 5 challenges", "unlocked": true },
+    { "id": "b7", "name": "Local Legend", "icon": "🏪", "desc": "50 local-sourced buys", "unlocked": false }
+  ],
+  "rewards": [
+    { "id": "r1", "cost": 500, "title": "£2 Tesco Clubcard Voucher", "icon": "🎫", "partner": "Tesco" },
+    { "id": "r2", "cost": 1000, "title": "Free Surprise Bag", "icon": "🛍️", "partner": "Partner Store" },
+    { "id": "r3", "cost": 2500, "title": "Plant a Real Tree", "icon": "🌳", "partner": "One Tree Planted" }
+  ]
+}
