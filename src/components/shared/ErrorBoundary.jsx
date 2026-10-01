@@ -1,4 +1,5 @@
 import { Component } from 'react'
+import { Sentry } from '../../lib/sentry.js'
 
 // Catches render crashes so a single bad screen never white-screens the app.
 export default class ErrorBoundary extends Component {
@@ -9,8 +10,9 @@ export default class ErrorBoundary extends Component {
   }
 
   componentDidCatch(error, info) {
-    // eslint-disable-next-line no-console
     console.error('Go Green caught an error:', error, info)
+    // No-op unless Sentry was initialised with a DSN.
+    Sentry.captureException(error, { extra: { componentStack: info?.componentStack } })
   }
 
   render() {

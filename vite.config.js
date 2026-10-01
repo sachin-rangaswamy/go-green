@@ -45,5 +45,13 @@ export default defineConfig(({ mode }) => {
     plugins: [react(), apiDevPlugin(env)],
     base: './',
     server: { host: true, port: 5173 },
+    test: {
+      environment: 'jsdom',
+      globals: true,
+      setupFiles: './src/test/setup.js',
+      css: false,
+      include: ['src/**/*.{test,spec}.{js,jsx}'],
+      exclude: ['node_modules', 'dist', 'e2e'],
+    },
   }
 })

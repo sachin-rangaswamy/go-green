@@ -10,3 +10,9 @@ dist
 # stray downloads
 go-green-impact.png
 *.png.download
+
+# test artifacts
+coverage
+playwright-report
+test-results
+.playwright
